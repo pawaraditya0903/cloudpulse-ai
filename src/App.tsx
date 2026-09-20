@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
+import { MetricsRibbon } from './components/MetricsRibbon';
 import { OneClickScenarios } from './components/OneClickScenarios';
 import { BlastRadiusGraph } from './components/BlastRadiusGraph';
 import { RemediationTerminal } from './components/RemediationTerminal';
+import { AgentTelemetryStream } from './components/AgentTelemetryStream';
+import { WellArchitectedScorecard } from './components/WellArchitectedScorecard';
 import { AgentWorkflowModal } from './components/AgentWorkflowModal';
 import { PostmortemModal } from './components/PostmortemModal';
 import { PRESET_SCENARIOS } from './data/presets';
@@ -12,11 +15,8 @@ import {
   Activity,
   AlertCircle,
   FileText,
-
   Sparkles,
   ShieldAlert,
-
-
   Send,
   Terminal,
 } from 'lucide-react';
@@ -72,7 +72,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0f17] text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-[#0b0f17] text-slate-100 flex flex-col font-sans">
       {/* Navigation */}
       <Navbar
         onOpenAgentProof={() => {
@@ -131,6 +131,14 @@ export const App: React.FC = () => {
 
       {/* Main Workspace */}
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        {/* Executive Metrics Ribbon */}
+        {activePlan && (
+          <MetricsRibbon
+            severity={activePlan.severity}
+            isSimulatedHealthy={isSimulatedHealthy}
+          />
+        )}
+
         {/* 1-Click Judge Presets */}
         <OneClickScenarios
           onSelectScenario={handleSelectScenario}
@@ -192,6 +200,14 @@ export const App: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Live Agent Diagnostic Telemetry Stream */}
+        {activePlan && (
+          <AgentTelemetryStream
+            plan={activePlan}
+            isAnalyzing={isAnalyzing}
+          />
+        )}
 
         {/* Triage Overview Card */}
         {activePlan && (
@@ -267,6 +283,9 @@ export const App: React.FC = () => {
             isSimulatedHealthy={isSimulatedHealthy}
           />
         )}
+
+        {/* Well-Architected Framework 6-Pillar Audit Card */}
+        {activePlan && <WellArchitectedScorecard plan={activePlan} />}
       </main>
 
       {/* Modals */}
@@ -290,7 +309,7 @@ export const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="font-bold text-white">CloudPulse AI</span>
-            <span>—</span>
+            <span>â€”</span>
             <span>Built for the AWS Builder Center "Zero to Shipped" Hackathon</span>
           </div>
           <div className="flex items-center gap-3">
