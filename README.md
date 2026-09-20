@@ -10,7 +10,7 @@
 
 **Instant Root-Cause Analysis • Visual Blast-Radius Topologies • Least-Privilege IAM & Rollback Runbooks**
 
-[Live Application Demo](https://main.amplifyapp.com) • [Architecture](#-system-architecture) • [Judge 1-Click Simulations](#-4-built-in-1-click-judge-simulations) • [Agent Co-Pilot Story](#-the-coding-agent-story-proof-of-connection)
+[Live Application Demo](https://main.d18aok4a78u07k.amplifyapp.com) • [Architecture](#-system-architecture) • [Judge 1-Click Simulations](#-4-built-in-1-click-judge-simulations) • [Agent Co-Pilot Story](#-the-coding-agent-story-proof-of-connection)
 
 </div>
 

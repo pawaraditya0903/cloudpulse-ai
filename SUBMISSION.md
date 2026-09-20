@@ -32,14 +32,14 @@ Add these exact tags in the Builder Center tag input:
 
 ### 4. GitHub / GitLab Repository
 ```text
-https://github.com/<YOUR_USERNAME>/cloudpulse-ai
+https://github.com/pawaraditya0903/cloudpulse-ai
 ```
 
 ---
 
 ### 5. Endpoint or Live Demo
 ```text
-https://main.<app-id>.amplifyapp.com
+https://main.d18aok4a78u07k.amplifyapp.com
 ```
 *(Deploy via AWS Amplify Hosting in 2 minutes using `amplify.yml` included in the repo!)*
 
@@ -53,8 +53,8 @@ https://main.<app-id>.amplifyapp.com
 > **Zero to Shipped AWS Hackathon Submission**  
 > **Category**: `#workplace-efficiency`  
 > **Lane**: `#startup`  
-> **Live Demo**: [https://main.<app-id>.amplifyapp.com](https://main.<app-id>.amplifyapp.com)  
-> **Source Code**: [https://github.com/<YOUR_USERNAME>/cloudpulse-ai](https://github.com/<YOUR_USERNAME>/cloudpulse-ai)  
+> **Live Demo**: [https://main.d18aok4a78u07k.amplifyapp.com](https://main.d18aok4a78u07k.amplifyapp.com)  
+> **Source Code**: [https://github.com/pawaraditya0903/cloudpulse-ai](https://github.com/pawaraditya0903/cloudpulse-ai)  
 
 ---
 
